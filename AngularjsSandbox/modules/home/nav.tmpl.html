@@ -1,0 +1,58 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top" ng-controller="navController as navCtrl">
+    <div class="container">
+        <div class="navbar-header" id="main_title">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="menu-expand-mini">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand" style="z-index:10001; margin-top: -20px;">
+                <small style="font-size: 10px; line-height: 7px; margin-left: -2px" class="text-center" ng-bind="navCtrl.client_name"></small>
+                <div style="height: 14px;">SPA</div>
+                <small style="font-size: 10px; line-height: 10px; margin-left: -2px" class="text-center" ng-bind="navCtrl.version_number"></small>
+            </a>
+        </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- if user is authenticated show menu -->
+        <div ng-if="navCtrl.isAuthenticated" class="navbar-collapse collapse">
+            <div class="navbar-right hidden-xs">
+                <div class="navbar-header">
+                    <!-- if user is in role admin -->
+                    <ul class="nav navbar-nav" ng-if="navCtrl.isAdministrator">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="menu-dropdown-mini"><span class="glyphicon glyphicon-cog"></span></a>
+                            <ul class="dropdown-menu">
+                                <li role="presentation" class="dropdown-header">
+                                    <a href="/Secure/Index">
+                                        <span class="glyphicon glyphicon-user"></span> {{$root.res('nav', 'home')}}
+                                    </a>
+                                </li>
+                             </ul>
+                        </li>
+                    </ul>
+                    <!-- end of if block -->
+                </div>
+            </div>
+            <ul class="nav navbar-nav">
+                <!-- @if ((Session["CURRENT_USER"] != null) && (((ApplicationUser)Session["CURRENT_USER"]).IsApprover.ToBool())) -->
+                <li id="menu-pending-changes" ng-if="navCtrl.isApprover">
+                    <a href="/Home/Index">
+                        <span class="glyphicon glyphicon-book"></span> {{$root.res('nav', 'home')}}
+                    </a>
+                </li>
+                <li class="hidden-md hidden-sm" id="menu-article">
+                    <a href="/Home/About">
+                        <span class="glyphicon glyphicon-picture"></span> {{$root.res('nav', 'about')}}
+                    </a>
+                </li>
+                <li class="hidden-md hidden-sm" id="menu-hero">
+                    <a href="Home/Contact">
+                        <span class="glyphicon glyphicon-list-alt"></span> {{$root.res('nav', 'contact')}}
+                    </a>
+                </li>
+            </ul>
+            <!-- include _LoginPartial -->
+            <div ng-include="'modules/login/logoff.tmpl.html'"></div>
+        </div>
+    </div>
+</div>

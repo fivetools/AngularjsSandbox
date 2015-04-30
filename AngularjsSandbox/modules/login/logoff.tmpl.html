@@ -1,0 +1,28 @@
+﻿<!--@Html.AntiForgeryToken()-->
+<div ng-controller="logoffController as logoffCtrl">
+    <form ng-if="logoffCtrl.isAuthenticated" id="logoutForm" class="navbar-right" ng-submit="logoffCtrl.submit()" novalidate>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <img ng-show="logoffCtrl.currentUICulture == 'EN-CA'" src="/img/CanadianFlag.png" height="12" /> <span ng-show="logoffCtrl.currentUICulture == 'EN-CA'">{{$root.res('resources', 'english')}}</span>
+                    <img ng-show="logoffCtrl.currentUICulture == 'EN-US'" src="/img/AmericanFlag.png" height="12" /> <span ng-show="logoffCtrl.currentUICulture == 'EN-US'">{{$root.res('resources', 'english')}}</span>
+                    <img ng-show="logoffCtrl.currentUICulture == 'FR-CA'" src="/img/CanadianFlag.png" height="12" /> <span ng-show="logoffCtrl.currentUICulture == 'FR-CA'">{{$root.res('resources', 'french')}}</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li ng-show="logoffCtrl.currentUICulture == 'EN-CA'"><a href="/Article/canadianenglish"> <img src="/img/CanadianFlag.png" height="12" /> {{$root.res('resources', 'english')}}</a></li>
+                    <li ng-show="logoffCtrl.currentUICulture == 'EN-US'"><a href="/Article/americanenglish"> <img src="/img/AmericanFlag.png" height="12" /> {{$root.res('resources', 'english')}}</a></li>
+                    <li ng-show="logoffCtrl.currentUICulture == 'FR-CA'"><a href="/Article/canadianfrench">> <img src="/img/CanadianFlag.png" height="12" /> {{$root.res('resources', 'french')}}</a></li>
+                </ul>
+            </li>
+            <li><a ng-click="logoffCtrl.logOff()"><i class="glyphicon glyphicon-log-out"></i> {{$root.res('logoff', 'logoff')}}</a></li>
+        </ul>
+    </form>
+    <div ng-if="!logoffCtrl.isAuthenticated">
+        <ul class="nav navbar-nav navbar-right hidden-md hidden-sm hidden-xs">
+            <li><a id="registerLink" href="/Account/Register">{{$root.res('logoff', 'register')}}</a></li>
+            <li><a id="loginLink" href="/Account/Login">{{$root.res('logoff', 'login')}}</a>
+        </ul>
+    </div>
+</div>
+

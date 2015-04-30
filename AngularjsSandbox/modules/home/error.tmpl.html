@@ -1,0 +1,43 @@
+﻿<!-- if error block -->
+<div class="container" ng-controller="errorController as errCtrl">
+    <div class="row" ng-if="errCtrl.hasErrors">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading ">
+                    <span class="text-danger">
+                        <i class="glyphicon glyphicon-exclamation-sign"></i>{{$root.res('error', 'error_occurred')}}
+                    </span>
+
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>{{errCtrl.errorMessage}}</li>
+                        <li>{{$root.res('error', 'relog_try_again')}}</li>
+                        <li>{{$root.res('error', 'if_issue_persists')}}</li>
+                    </ul>
+                    <div class="col-lg-8">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">{{$root.res('resources', 'username')}}</span>
+                            <input type="text" disabled class="form-control disabled" ng-model="errCtrl.username" placeholder="{{$root.res('resources', 'username')}}" />
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon"></span>
+                            <textarea class="form-control" placeholder="{{$root.res('error', 'user_activity_description')}}" ng-model="errCtrl.actionAttempted" cols="20" rows="5"></textarea>
+                        </div>
+                        <br />
+                        <div class="input-group input-group-sm">
+                            <a href="#" class="btn btn-default" ng-click="errCtrl.submit()">
+                                <span class="text-danger">
+                                    <i class=" glyphicon glyphicon-tag">
+                                    </i> {{$root.res('error', 'request_support')}}
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of if block -->

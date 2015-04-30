@@ -59,6 +59,75 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="api\api.js" />
+    <Content Include="api\apiList.js" />
+    <Content Include="app.js" />
+    <Content Include="css\themes\bootstrap\bootstrap-theme.css" />
+    <Content Include="css\themes\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="css\themes\bootstrap\bootstrap.css" />
+    <Content Include="css\themes\bootstrap\bootstrap.min.css" />
+    <Content Include="css\themes\darkly\bootstrap.css" />
+    <Content Include="css\themes\flatly\bootstrap.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="gulpfile.js" />
+    <Content Include="img\ajax-loader.gif" />
+    <Content Include="img\AmericanFlag.png" />
+    <Content Include="img\CanadianFlag.png" />
+    <Content Include="img\etool-throbber.gif" />
+    <Content Include="img\menu-square-button.jpg" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="modules\common\main.controller.js" />
+    <Content Include="modules\config\routes.js" />
+    <Content Include="modules\core\core.config.js" />
+    <Content Include="modules\core\core.controller.js" />
+    <Content Include="modules\directives\include_replace.directive.js" />
+    <Content Include="modules\home\error.controller.js" />
+    <Content Include="modules\home\error.tmpl.html" />
+    <Content Include="modules\home\home.controller.js" />
+    <Content Include="modules\home\home.tmpl.html" />
+    <Content Include="modules\home\nav.controller.js" />
+    <Content Include="modules\home\nav.tmpl.html" />
+    <Content Include="modules\login\login.controller.js" />
+    <Content Include="modules\login\login.tmpl.html" />
+    <Content Include="modules\login\logoff.controller.js" />
+    <Content Include="modules\login\logoff.tmpl.html" />
+    <Content Include="modules\services\logging.service.js" />
+    <Content Include="modules\services\resources.service.js" />
+    <Content Include="modules\services\user.service.js" />
+    <Content Include="modules\services\utility.service.js" />
+    <Content Include="server.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.less" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="compiled\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\less\darkly\bootswatch.less" />
+    <Content Include="css\less\darkly\variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\less\flatly\bootswatch.less" />
+    <Content Include="css\less\flatly\variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\themes\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="css\themes\bootstrap\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
