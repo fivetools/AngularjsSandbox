@@ -1,4 +1,4 @@
-﻿var config = require("./modules/core/core.config.js")[0]();
+﻿var config = require("./modules/core/core.config.js")[0](); 
 
 var ngModule = angular.module("Dashboard", [
         "ngAnimate", "ngRoute", "ngMessages", "ngCookies","ngSanitize", "ngResource",
